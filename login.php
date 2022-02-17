@@ -1,6 +1,8 @@
 <?php
 session_start();
-$connect = mysqli_connect('localhost', 'root', '', 'test');
+
+include('sql.php');
+
 $username = $_POST['login'];
 $password = $_POST['password'];
 
@@ -22,6 +24,8 @@ if ($num == 1) {
     if ($pas == 1) {
         $_SESSION['user'] = htmlspecialchars($_POST['login']);
         header('Location: user.php');
+    } else {
+        header('Location: strLoginError.php');
     };
 } else {
     header('Location: strLoginError.php');

@@ -1,6 +1,8 @@
 <?php
 session_start();
-$connect = mysqli_connect('localhost', 'root', '', 'test');
+
+include('sql.php');
+
 $username = $_POST['login'];
 $password = $_POST['password'];
 

@@ -1,6 +1,8 @@
 <?php
 session_start();
-$connect = mysqli_connect('localhost', 'root', '', 'test');
+
+include('sql.php');
+
 $day = $_POST['day'];
 $month = $_POST['month'];
 $year = $_POST['year'];
